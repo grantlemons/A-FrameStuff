@@ -1,0 +1,363 @@
+<!--Please Change A Few Things So He Doesn't Notice We All Have The Same Code!-->
+
+<!--Click Based Interactions:-->
+    <!--Too Much Sun:-->
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Shrinking</title>
+            <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+        </head>
+        <body>
+            <a-scene>
+                <!-- Set the sky color -->
+                <a-sky color="deepskyblue"></a-sky>
+                
+                <!-- Cursor set up-->
+                <!-- Add the cursor tag -->
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+
+                <!-- Very large sun -->
+                <!-- Fill in the animation to start
+                    the shrinking on a click -->
+                <a-sphere color="yellow" radius="10"
+                    position="8 10 -15">
+                    <a-animation
+                        attribute="radius"
+                        from="10"
+                        to="5"
+                        dur="2000"
+                        begin="click"
+                    ></a-animation>
+                </a-sphere>
+
+            </a-scene>
+        </body>
+        </html>
+
+    <!--Blast Off!:-->
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+                <title>Rocketships</title>
+            </head>
+            <body>
+                <a-scene>
+                    <!-- Set background -->
+                    <a-sky color="lightgreen"></a-sky>
+                    
+                    <!-- Set up the camera and cursor -->
+                    <a-camera>
+                        <a-cursor></a-cursor>
+                    </a-camera>
+                    
+                    <!-- Rocket -->
+                    <a-cone color="sandybrown" position="10 3 -10"
+                        radius-bottom="4" radius-top="1"
+                        height="6">
+                        <a-animation
+                            attribute="position"
+                            from="10 3 -10"
+                            to="10 100 -10"
+                            dur="3000"
+                            begin="click"
+                        >
+                        </a-animation>
+                        
+                    </a-cylinder>
+                </a-scene>
+            </body>
+        </html>
+
+    <!--Going Outside:-->
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            </head>
+            <body>
+                <a-scene>
+                    <!-- Set background -->
+                    <a-sky color="wheat"></a-sky>
+                    
+                    <!-- Set up camera -->
+                    <a-camera>
+                        <a-cursor></a-cursor>
+                    </a-camera>
+                    
+                    <!-- Door -->
+                    <a-circle src= "https://codehs.com/uploads/4bf4f5ffc0545adf76a36b344822aa24"
+                        radius="2" position="0 2 -1">
+                        <a-animation
+                            attribute="visible"
+                            from="true"
+                            to="false"
+                            dur="1000"
+                            begin="click"
+                        ></a-animation>
+                    </a-circle>
+
+                    <!-- ground -->
+                    <a-plane rotation="-90 0 0" width="100"
+                        height="50" position="0 0 -25"
+                        color="forestgreen">
+                            
+                    </a-plane>
+                    
+                    <!-- Mountains -->
+                    <a-cone color="royalblue" radius-bottom="30"
+                        radius-top="10" height="40" 
+                        position="35 18 -100">
+                    </a-cone>
+                    <a-cone color="royalblue" radius-bottom="30"
+                        radius-top="10" height="50" 
+                        position="65 18 -100">
+                    </a-cone>
+                    <a-cone color="royalblue" radius-bottom="30"
+                        radius-top="10" height="40" 
+                        position="85 18 -90">
+                    </a-cone>
+                    <a-cone color="royalblue" radius-bottom="30"
+                        radius-top="10" height="20" 
+                        position="15 8 -70">
+                    </a-cone>
+                </a-scene>
+            </body>
+        </html>
+
+<!--Gaze Based Interactions:-->
+    <!--Fill A Vase:-->
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            </head>
+            <body>
+                <a-scene>
+                    <!-- Set up background -->
+                    <a-sky color="tomato"></a-sky>
+                    
+                    <!-- Set up camera and cursor -->
+                    <a-camera>
+                        <a-cursor fuse="true" fusetimeout="1000"></a-cursor>
+                    </a-camera>
+                    
+                    <!-- Set up floor -->
+                    <a-plane color="darkgreen" rotation="-90 0 0"
+                        width="50" height="50">
+                            
+                    </a-plane>
+                    
+                    <!-- Bowl -->
+                    <a-cone color="white" radius-bottom="2"
+                        radius-top="6" position="0 2.5 -15"
+                        height="5">
+                    </a-cone>
+                    
+                    <!-- Water -->
+                    <a-cone color="dodgerblue" radius-bottom="1"
+                        radius-top="4" position="0 2.5 -13"
+                        height="2">
+                    
+                        <a-animation
+                            attribute="height"
+                            from="2"
+                            to="4"
+                            begin="click"
+                            direction="alternate"
+                        ></a-animation>
+                        
+                    </a-cone>
+                </a-scene>
+            </body>
+        </html>
+    
+    <!--Tumbleweeds:-->
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+                <title>Sliding Around</title>
+            </head>
+            <body>
+                <a-scene>
+                
+                    <!-- Set the Sky -->
+                    <a-sky color="mediumseagreen"></a-sky>
+                    
+                    <!-- Set the camera and cursor -->
+                    <a-camera>
+                        <a-cursor fuse="true" fuse-timeout="1500"></a-cursor>
+                    </a-camera>
+                    
+                    <!-- Ground -->
+                    <a-plane position="0 0 0" rotation="-90 0 0"
+                        color="sienna" height="100" width="100">
+                    </a-plane>
+                    
+                    <!-- Torus -->
+                    <a-torus arc="360" radius-tubular="0.1"
+                        radius="1" color="goldenrod"
+                        position="16 1 -10">
+                        
+                        <a-animation
+                        attribute="position"
+                        from="16 1 -10"
+                        to="-20 1 -5"
+                        dur="5000"
+                        begin="click"
+                        direction="alternate"
+                        ></a-animation>
+                            
+                    </a-torus>
+                    
+                </a-scene>
+            </body>
+        </html>
+    
+    <!--Vanishing Bubbles:-->
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+                <title>Vanishing Bubbles</title>
+            </head>
+            <body>
+                <a-scene>
+                    <!-- Set up the sky -->
+                    <a-sky color="cornflowerblue"></a-sky>
+                    
+                    <!-- Set up the camera and cursor -->
+                    <a-camera>
+                        <a-cursor fuse="true" fuse-timeout="1500"></a-cursor>
+                    </a-camera>
+                    
+                    <!-- Ground Plane -->
+                    <a-plane position="0 0 0" height="100" width="100" color="darkolivegreen" rotation="-90 0 0">
+                    </a-plane>
+                    
+                    <!-- First Bubble -->
+                    <a-sphere position="-10 10 -3" color="aquamarine" radius="1">
+                        <a-animation
+                            attribute="visible"
+                            from="true"
+                            to="false"
+                            dur="1"
+                            begin="click"
+                        >
+                        </a-animation>
+                    </a-sphere>
+                    
+                    <!-- Second Bubble -->
+                    <a-sphere position="2 7 -3" color="darkseagreen" radius="1">
+                        <a-animation
+                            attribute="visible"
+                            from="true"
+                            to="false"
+                            dur="1"
+                            begin="click"
+                        >
+                        </a-animation>
+                    </a-sphere>
+                    
+                    <!-- Third Bubble -->
+                    <a-sphere position="5 3 -3" color="plum" radius="1">
+                        <a-animation
+                            attribute="visible"
+                            from="true"
+                            to="false"
+                            dur="1"
+                            begin="click"
+                        >
+                        </a-animation>
+                    </a-sphere>
+                </a-scene>
+            </body>
+        </html>
+    
+    <!--Do The Create Your Own Your Self-->
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        </head>
+        <body>
+            <a-scene>
+                <!-- Sky -->
+                <a-sky color="cyan"></a-sky>
+                
+                <!-- Camera -->
+                
+                <a-camera>
+                    <a-cursor fuse="true" fuse-timeout="1500"></a-cursor>
+                </a-camera>
+                
+                <!-- Ground -->
+                <a-plane position="0 0 0" rotation="-90 0 0" color="green" width="20" height="20"></a-plane>
+                
+                <!-- Sphere -->
+                <a-sphere position="2 0.5 -3" color="red" radius="0.5">
+                    <a-animation
+                        attribute="color"
+                        from="red"
+                        to="blue"
+                        dur="5000"
+                        begin="click"
+                        direction="alternate"
+                    >
+                    </a-animation>
+                </a-sphere>
+                
+                <!-- Box -->
+                <a-box position="1 5 -2" color="aquamarine" width="1" height="1" depth="1" rotation="0 0 0">
+                    <a-animation
+                        attribute="rotation"
+                        from="0 0 0"
+                        to="360 360 360"
+                        dur="1000"
+                        begin="click"
+                        direction="alternate"
+                    ></a-animation>
+                </a-box>
+                
+                <!-- Cone -->
+                <a-cone position="-2 3 0" color="brown" radius-bottom="1" radius-top="0" height="6">
+                    <a-animation
+                        attribute="color"
+                        from="brown"
+                        to="black"
+                        dur="1"
+                        begin="500"
+                        direction="alternate"
+                    ></a-animation>
+                </a-cone>
+                
+                <!-- Cylinder -->
+                <a-cylinder position="-1 5 6" color="orange" radius="2" height="10">
+                    <a-animation
+                        attribute="color"
+                        from="orange"
+                        to="brown"
+                        dur="6000"
+                        direction="alternate"
+                        begin="click"
+                    ></a-animation>
+                    <a-animation
+                        attribute="radius"
+                        from="2"
+                        to="1"
+                        dur="1000"
+                        begin="100"
+                        direction="alternate"
+                    ></a-animation>
+                </a-cylinder>
+
+                <!-- Tourus -->
+                <a-torus position="2 0 4" color="green" radius="1" radius-tubular="0.2"></a-torus>
+            </a-scene>
+        </body>
+    </html>

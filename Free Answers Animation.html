@@ -1,0 +1,269 @@
+<!--Please Change A Few Things So He Doesn't Notice We All Have The Same Code!-->
+
+Sliding Cylinder:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            <title>Visiting the Corners</title>
+        </head>
+        <body>
+            <a-scene>
+            
+                <!-- Set the background -->
+                <a-sky color="lightblue"></a-sky>   
+        
+                <!-- Moving Cylinder -->
+                <a-cylinder color="blue" height="4"
+                        top-radius="2" bottom-radius="2">
+                    <a-animation
+                        attribute="position"
+                        from="-4 2 -22"
+                        to="4 2 -8"
+                        >
+                    </a-animation>
+                </a-cylinder>
+            
+                <!-- Floor --> 
+                <a-plane position="0 0 -15" height="16" 
+                        width="10" rotation="-90 0 0"
+                        color="black">
+                </a-plane>
+                <!-- Walls -->
+                <!-- Right Wall -->
+                <a-box position="5 2 -15" height="4" width=".5"
+                        color="red" depth="16">
+                </a-box>
+                <!-- Left Wall -->
+                <a-box position="-5 2 -15" height="4" width=".5"
+                        color="red" depth="16">
+                </a-box>
+                <!-- Back Wall -->
+                <a-box position="0 2 -23" height="4" width="10"
+                        color="orange" depth=".5">
+                </a-box>
+            </a-scene>
+        </body>
+    </html>
+
+Radioactive:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            <title>Radioactive Signals</title>
+        </head>
+        <body>
+            <a-scene>
+                <!-- Set the sky -->
+                <a-sky color="black"></a-sky>
+                
+                <!-- Yellow cone
+                    Add an animation tag so that it rotates 180 degrees
+                    about the x-axis -->
+                <a-cone color="yellow" radius-bottom=".5" radius-top="3"
+                    position="8 5 -15" height="3">
+                <a-animation
+                        attribute="rotation"
+                        from="0 0 0"
+                        to="180 0 0"
+                        repeat="indefinite"
+                        direction="alternate"
+                >
+                </a-animation>
+                </a-cone>
+                
+                <!-- Green cone
+                    Rotates about the y-axis by 180 degrees -->
+                <a-cone color="limegreen" radius-bottom=".5" radius-top="3"
+                    position="-8 5 -15" height="3">
+                    <a-animation
+                        attribute="rotation"
+                        from="0 0 90"
+                        to="0 180 90"
+                        repeat="indefinite"
+                        direction="alternate"
+                    ></a-animation>
+                </a-cone>
+            </a-scene>
+        </body>
+    </html>
+
+Wormhole:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            <title>Wormhole</title>
+        </head>
+        <body>
+            <a-scene>
+                <!-- Set the sky -->
+                <a-sky color="powderblue"></a-sky>
+            <!-- Worm -->
+            <a-cylinder radius="0.5" height="3" rotation="0 0 90"
+                    color="lightpink" position="-15 1.5 0">
+                    <a-animation
+                        attribute="position"
+                        from="-15 1.5 0"
+                        to="2 1 -10"
+                        repeat="indefinate"
+                        dur="3000"
+                    ></a-animation>
+                        
+                </a-cylinder>
+            
+            
+            <!-- Wormhole -->
+            <a-sphere color="gold" radius="3" position="2 1 -10">
+                    <a-animation
+                        attribute="color"
+                        from="gold"
+                        to="black"
+                        repeat="alternate"
+                        dur="3000"
+                    ></a-animation>
+                    
+            </a-sphere>
+            </a-scene>
+        </body>
+    </html>
+
+Catapult:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            <title>Flinging Pumpkins</title>
+        </head>
+        <body>
+            <a-scene>
+                <a-box position="0 -1 -5" color="red" width="5" height="0.25" depth="0.5">
+                    <a-animation attribute="rotation" from="0 0 0" to="0 0 45" dur=2200></a-animation>
+                </a-box>
+                <a-sphere position="2.5 -.5 -5" color="orange" radius="0.5">
+                    <a-animation attribute="position" from="2.5 -.5 -5" to="-15 10 -5" dur=4500></a-animation>
+                </a-sphere>
+            </a-scene>
+        </body>
+    </html>
+
+Lightspeed Ahead:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+            <title>Flung into Space</title>
+        </head>
+        <body>
+            <a-scene>
+                <!-- Set the sky -->
+                <a-sky color="black"></a-sky>
+                
+                <!-- Stars -->
+                <a-sphere position="2 7 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="2 7 -100"
+                    to="2 7 100"
+                    dur="800"
+                    ></a-animation>
+                </a-sphere>
+                
+                <a-sphere position="6 6 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="6 6 -100"
+                    to="6 6 100"
+                    dur="700"
+                    ></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-3 30 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="-3 30 -100"
+                    to="-3 30 100"
+                    dur="2000"
+                    ></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-8 24 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="-8 24 -100"
+                    to="-8 24 100"
+                    dur="1700"
+                    ></a-animation>
+                </a-sphere>
+
+                <a-sphere position="-12 6 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="-12 6 -100"
+                    to="-12 6 100"
+                    dur="1500"
+                    ></a-animation>
+                </a-sphere>
+
+                <a-sphere position="6 2 -100" color="white" radius="0.5">
+                    <a-animation
+                    attribute="position"
+                    from="6 2 -100"
+                    to="6 2 100"
+                    dur="1040"
+                    ></a-animation>
+                </a-sphere>
+                
+            </a-scene>
+        </body>
+    </html>
+
+Animate A Scene:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        </head>
+        <body>
+            <a-scene>
+                <a-sky color="powderblue"></a-sky>
+                <a-plane position="0 0 0" rotation="-90 0 0" color="green" width="20" height="40">
+                    <a-animation 
+                        attribute="color"
+                        from="green"
+                        to="red"
+                        dur=2000
+
+                    ></a-animation>
+                </a-plane>
+                <a-plane position="0 5 -20" color="black" width="20" height="10">
+                    <a-animation 
+                        attribute="rotation"
+                        from="0 0 0"
+                        to="360 0 0"
+                        dur=5000
+
+                    ></a-animation>
+                </a-plane>
+                <a-plane position="0 5 20" color="white" width="20" height="10" rotation="180 0 0">
+                    <a-animation 
+                        attribute="position"
+                        from="0 5 20"
+                        to="0 10 20"
+                        dur=500
+
+                    ></a-animation>
+                </a-plane>
+                <a-sphere position="0 0.5 -1" color="yellow" radius="0.5">
+                    <a-animation 
+                        attribute="position"
+                        from="0 0.5 -1"
+                        to="0 0.5 -20"
+                        dur=1500
+
+                    ></a-animation>
+                </a-sphere>
+            </a-scene>
+        </body>
+    </html>
